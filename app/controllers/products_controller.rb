@@ -59,6 +59,7 @@ class ProductsController < ApplicationController
 
   def new_movement
     @product = Product.find(params[:id])
+    @movement = Movement.new
   end
 
   private
