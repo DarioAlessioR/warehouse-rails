@@ -9,12 +9,24 @@
 <br>
 <table class="table">
 <thead>
-<tr>
-  <th>ID</th>
-  <th>Name</th>
-  <th>Reference</th>
-  <th>Quantity</th>
-  <th>Actions</th>
-</tr>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Reference</th>
+    <th>Quantity</th>
+    <th>Actions</th>
+  </tr>
+<tbody>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.reference %></td>
+      <td><%= 0 %></td>
+      <td><%= link_to 'Details', product_path(product), class: "btn btn-primary" %></td>
+
+    </tr>
+  <% end %>
+</tbody>
 
 </table>
