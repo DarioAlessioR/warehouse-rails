@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html
       format.xlsx {
-        response.headers['Content-Disposition'] = 'attachment; filename="products.xlsx"'
+        response.headers['Content-Disposition'] = 'attachment; filename="Products.xlsx"'
       }
     end
   end
