@@ -9,4 +9,16 @@ class Movement < ApplicationRecord
       "Remove" => MovementTypes[:remove]
     }
   end
+
+  def movement_type_name
+    case movement_type
+    when MovementTypes[:add]
+      "Add"
+    when MovementTypes[:remove]
+      "Remove"
+    else
+      "Unknown"
+    end
+  end
 end
+
