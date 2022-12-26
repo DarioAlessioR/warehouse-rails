@@ -4,6 +4,12 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
+    respond_to do |format|
+      format.html
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachment; filename="products.xlsx"'
+      }
+    end
   end
 
   # GET /products/1 or /products/1.json
