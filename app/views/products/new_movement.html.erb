@@ -21,14 +21,26 @@
   <div class="col-lg-12">
     <div class="card p-5">
       <%= form_with model: @movement, url: create_movement_product_path(@product), method: :post do |f| %>
+       
+        <% if @movement.errors.any? %>
+        <div class="alert alert-danger">
+          <h3><%= flash[:notice] %></h3>
+          <ul>
+            <% @movement.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+
         <div class="form-group">
           <%= f.label :movement_type, "Movement_type" %>
           <%= f.select :movement_type, options_for_select(Movement.get_movement_types), {}, {class: "form-control"} %>
         </div>
 
         <div class="form-group">
-          <%= f.label :quantity, "Quantity" %>
-          <%= f.number_field :quantity, class: "form-control" %>
+          <%= f.label :movement_quantity, "Quantity" %>
+          <%= f.number_field :movement_quantity, class: "form-control" %>
         </div>
 
         <div class="form-group">
@@ -38,6 +50,7 @@
 
         <div class="form-group">
           <%= f.submit "Create movement", class: "btn btn-primary" %>
+          <%= link_to "Cancel", product_path(@product), class: "btn btn-danger" %>
         </div>
       
       <% end %>
