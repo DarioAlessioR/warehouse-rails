@@ -22,18 +22,18 @@ To get a local copy of this project clone this repository: git clone https://git
 
 In the root directory run: gem install bundler
 
-Then run: bundle install
+Then run: `bundle install`
 
-Then run: rails db:migrate
+Then run: `rails db:migrate`
 
-Run app in the Command Line: rails s
+Run app in the Command Line: `rails s`
 
-To run test cases in the command line type: rspec spec
+To run test cases in the command line type: `rspec spec`
 
 ## Built With:
-Major languages: HTML, JavaScript, Ruby, Postgresql, Ruby on Rails
+Major languages: `HTML`, `JavaScript`, `Ruby`, `Postgresql`, `Ruby on Rails`
 
-Technologies used: VSC, Github, Gitflow, Bootstrap, RSpec, Capybara
+Technologies used: `VSC`, `Github`, `Gitflow`, `Bootstrap`, `RSpec`, `Capybara`
 
 
 ##  Author
