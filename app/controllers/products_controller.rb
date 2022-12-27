@@ -14,6 +14,12 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachment; filename="Product_details.xlsx"'
+      }
+    end
   end
 
   # GET /products/new

@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Product_details") do |sheet|
+  sheet.add_row ['ID', @product.id]
+  sheet.add_row ['Reference', @product.reference]
+  sheet.add_row ['Name', @product.name]
+  sheet.add_row ['Quantity', @product.quantity]
+  sheet.add_row ['Description', @product.description]
+  sheet.add_row ['Created at', @product.created_at]
+  sheet.add_row []
+  sheet.add_row ['Type', 'Quantity', 'Comment', 'Created at']
+  @product.movements.each do |movement|
+    sheet.add_row [movement.movement_type_name, movement.movement_quantity, movement.comment, movement.created_at]
+  end
+end
