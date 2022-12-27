@@ -21,23 +21,23 @@ RSpec.describe 'Product index page', type: :feature do
     expect(page).to have_content('10')
   end
 
-  it 'displays the product movements link' do
+  it 'displays the product Details link' do
     visit products_path
-    expect(page).to have_link('Movements', href: product_path(@product))
+    expect(page).to have_link('Details', href: product_path(@product))
   end
 
-  it 'displays the product new movement link' do
+  it 'displays the product Export to Excel link' do
     visit products_path
-    expect(page).to have_link('New movement', href: new_movement_product_path(@product))
+    expect(page).to have_content('Export to Excel')
   end
 
-  it 'displays the product edit link' do
+  it 'displays the product Create product link' do
     visit products_path
-    expect(page).to have_link('Edit', href: edit_product_path(@product))
+    expect(page).to have_link('Create new product', href: new_product_path)
   end
 
-  it 'displays the product delete link' do
+  it 'displays the product Quantity column' do
     visit products_path
-    expect(page).to have_link('Delete', href: product_path(@product))
+    expect(page).to have_content('Quantity')
   end
 end
