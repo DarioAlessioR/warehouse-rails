@@ -31,9 +31,9 @@ Run app in the Command Line: `rails s`
 To run test cases in the command line type: `rspec spec`
 
 ## Built With:
-Major languages: HTML, JavaScript, Ruby, Postgresql, Ruby on Rails
+Major languages: `HTML`, `JavaScript`, `Ruby`, `Postgresql`, `Ruby on Rails`
 
-Technologies used: VSC, Github, Gitflow, Bootstrap, RSpec, Capybara
+Technologies used: `VSC`, `Github`, `Gitflow`, `Bootstrap`, `RSpec`, `Capybara`
 
 
 ##  Author
