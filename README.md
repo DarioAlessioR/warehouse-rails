@@ -1,24 +1,66 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Project Name: Ruby on Rails Inventory Control App
 
-Things you may want to cover:
+## Project description:
+The app is an inventory control system. It lets the user perform CRUD operations on products and product movements.
+The user can also download Excel files containing the inventory of all products and the details for a specific product and its movements.
 
-* Ruby version
+![](app/assets/images/readme_image.png)
 
-* System dependencies
+## Project Requirements:
+The project has been built according to the specifications included in the following links:
 
-* Configuration
+https://github.com/damuz91/mi-bodega-rails
 
-* Database creation
+https://www.youtube.com/watch?v=JG0C2rtpCvI
 
-* Database initialization
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy of this project clone this repository: git clone https://github.com/DarioAlessioR/warehouse-rails
 
-* Deployment instructions
+In the root directory run: gem install bundler
 
-* ...
+Then run: bundle install
+
+Then run: rails db:migrate
+
+Run app in the Command Line: rails s
+
+To run test cases in the command line type: rspec spec
+
+## Built With:
+Major languages: HTML, JavaScript, Ruby, Postgresql, Ruby on Rails
+
+Technologies used: VSC, Github, Gitflow, Bootstrap, RSpec
+
+
+##  Author
+👤 Dario Alessio
+
+- GitHub: https://github.com/DarioAlessioR
+
+- Slack: https://microverse-students.slack.com/team/U039GCFRK9B
+
+- LinkedIn: https://www.linkedin.com/in/dario-alessio-3a3b7911b
+
+## 🤝 Contributing:
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support:
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to David Munoz (https://github.com/damuz91) for creating the original repo and Youtube video
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
