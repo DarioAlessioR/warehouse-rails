@@ -3,8 +3,8 @@
 # Project Name: Ruby on Rails Inventory Control App
 
 ## Project description:
-The app is an inventory control system. It lets the user perform CRUD operations on products and product movements.
-The user can also download Excel files containing the inventory of all products and the details for a specific product and its movements.
+The app is an inventory control system. It lets the user perform `CRUD` operations on products and product movements.
+The user can also `download Excel files` containing the inventory of all products and the details for a specific product and its movements.
 
 ![](app/assets/images/readme_image.png)
 
