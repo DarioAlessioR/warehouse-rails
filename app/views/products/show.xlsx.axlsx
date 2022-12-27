@@ -7,7 +7,7 @@ wb.add_worksheet(name: "Product_details") do |sheet|
   sheet.add_row ['Description', @product.description]
   sheet.add_row ['Created at', @product.created_at]
   sheet.add_row []
-  sheet.add_row ['Type', 'Quantity', 'Comment', 'Created at']
+  sheet.add_row ['Type', 'Quantity', 'Comment', 'Date/Time created']
   @product.movements.each do |movement|
     sheet.add_row [movement.movement_type_name, movement.movement_quantity, movement.comment, movement.created_at]
   end
