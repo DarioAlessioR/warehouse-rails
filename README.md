@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=JG0C2rtpCvI
 
 To get a local copy of this project clone this repository: git clone https://github.com/DarioAlessioR/warehouse-rails
 
-In the root directory run: gem install bundler
+In the root directory run: `gem install bundler`
 
 Then run: `bundle install`
 
