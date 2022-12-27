@@ -89,5 +89,25 @@ RSpec.describe ProductsController, type: :controller do
     end
   end
 
+  describe 'POST #create_movement' do
+    context 'with valid params' do
+      it 'creates a new Movement' do
+        expect {
+          post :create_movement, params: { id: @product.to_param, movement: { movement_type: Movement::MovementTypes[:remove], movement_quantity: 5, comment: 'Test' } }
+        }.to change(Movement, :count).by(1)
+      end
 
+      it 'redirects to the product' do
+        post :create_movement, params: { id: @product.to_param, movement: { movement_type: Movement::MovementTypes[:remove], movement_quantity: 5, comment: 'Test' } }
+        expect(response).to redirect_to(@product)
+      end
+    end
+
+    context 'with invalid params' do
+      it 'returns a success response (i.e. to display the "new" template)' do
+        post :create_movement, params: { id: @product.to_param, movement: { movement_type: '', movement_quantity: '', comment: '' } }
+        expect(response).not_to be_successful
+      end
+    end
+  end
 end
