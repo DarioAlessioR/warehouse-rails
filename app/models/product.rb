@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_many :movements
+  has_many :movements, dependent: :destroy
   validates :name, presence: true
   validates :reference, presence: true
 

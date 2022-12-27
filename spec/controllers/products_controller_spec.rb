@@ -68,4 +68,26 @@ RSpec.describe ProductsController, type: :controller do
       end
     end
   end
+
+  describe 'DELETE #destroy' do
+    it 'destroys the requested product' do
+      expect {
+        delete :destroy, params: { id: @product.to_param }
+      }.to change(Product, :count).by(-1)
+    end
+
+    it 'redirects to the products list' do
+      delete :destroy, params: { id: @product.to_param }
+      expect(response).to redirect_to(products_url)
+    end
+  end
+
+  describe 'GET #new_movement' do
+    it 'returns a success response' do
+      get :new_movement, params: { id: @product.to_param }
+      expect(response).to be_successful
+    end
+  end
+
+
 end
