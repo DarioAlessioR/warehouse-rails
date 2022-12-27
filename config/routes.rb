@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "dashboard#index"
+  root "products#index"
   resources :products do
     member do
       get :new_movement
