@@ -57,7 +57,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to David Munoz (https://github.com/damuz91) for creating the original repo and Youtube video
+- Special thanks to developer David Munoz (https://github.com/damuz91) for creating the original repo and Youtube video that inspired and served as guide for this project.
 - Inspiration
 - etc
 
